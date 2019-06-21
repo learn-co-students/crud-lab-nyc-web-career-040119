@@ -1,7 +1,12 @@
-
+import { combineReducers } from 'redux'
 import cuid from 'cuid';
+
+import restaurants from './restaurantsReducer'
+import reviews from './reviewsReducer'
+
 export const cuidFn = cuid;
 
-export default function manageRestaurants(state, action) {
-
-}
+export default combineReducers({
+  restaurants,
+  reviews
+})
